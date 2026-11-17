@@ -141,7 +141,8 @@ public partial class MainWindow : Window
     {
         public bool HoverEnabled { get; set; } = true;
         public bool AlwaysOnTop { get; set; } = true;
-        public bool GlassStyle { get; set; }
+        /// <summary>Liquid-glass surface. On by default so every machine looks the same.</summary>
+        public bool GlassStyle { get; set; } = true;
 
         /// <summary>Shake + glow when a notification arrives.</summary>
         public bool NotificationAlert { get; set; } = true;

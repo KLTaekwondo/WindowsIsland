@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+        <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>app.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- 常驻小工具：让 GC 更积极地收缩堆（数值越大越省内存、越费 CPU） -->
+        <RuntimeHostConfigurationOption Include="System.GC.ConserveMemory" Value="9" />
+        <RuntimeHostConfigurationOption Include="System.GC.RetainVM" Value="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- 展开为 WPF 资源（窗口图标），同时保留文件副本（托盘图标兜底） -->
+        <Resource Include="app.ico" />
+        <None Update="app.ico" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+</Project>

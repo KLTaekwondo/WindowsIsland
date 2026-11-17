@@ -1,0 +1,21 @@
+# Build output
+bin/
+obj/
+dist/
+publish/
+artifacts/
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+*.sln.DotSettings.user
+
+# WPF temp project files
+*_wpftmp.csproj
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
